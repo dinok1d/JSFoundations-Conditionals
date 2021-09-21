@@ -5,5 +5,32 @@ const prompt = require("prompt-sync")(); // Please don't touch me :)
 // const name = prompt("What's your name? ");
 // console.log(`Hi, I'm ${name}.`);
 
-let integer1 = prompt("select your first number");
-let integer2 = prompt("select your second number? ");
+const integer1 = Number(prompt("select your first number"));
+const integer2 = Number(prompt("select your second number? "));
+
+const operation = prompt("please select an operation")
+// console.log (`${integer1} ${operation} ${integer2}`)
+
+if  (!isNaN(integer1) && !isNaN(integer2)) { 
+
+     if  (operation === "+") {
+    console.log(integer1 + integer2)
+}
+    else if (operation === "-") {
+console.log(integer1 - integer2)
+}
+
+    else if (operation === "*") {
+console.log(integer1 * integer2)
+}
+
+    else if (operation === "/") {
+console.log(integer1 / integer2)
+}
+    else {
+    console.log("invalid operation (error)")
+}
+}
+else {
+    console.log ("invalid number")
+}
